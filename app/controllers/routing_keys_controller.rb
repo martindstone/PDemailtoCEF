@@ -24,8 +24,8 @@ class RoutingKeysController < ApplicationController
       render plain: "oops!\n", status: 400
       return
     end
-
-    url = "https://2ec9ef4285d1.ngrok.io/routing_keys/verify?token=#{r.token}"
+    base_url = ENV["BASE_URL"]
+    url = "#{base_url}/routing_keys/verify?token=#{r.token}"
     body = {
       event_action: "trigger",
       routing_key: r.routing_key,

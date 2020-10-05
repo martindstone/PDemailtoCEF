@@ -1,4 +1,4 @@
-class RoutingKeysController < ApplicationController
+class IncomingMessageController < ApplicationController
   protect_from_forgery with: :null_session
 
   def create
