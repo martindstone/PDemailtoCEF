@@ -1,0 +1,2 @@
+class RoutingKey < ApplicationRecord
+end

@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  routing_key: MyString
+  token: MyString
+  verified: false
+
+two:
+  routing_key: MyString
+  token: MyString
+  verified: false

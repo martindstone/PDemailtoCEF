@@ -1,0 +1,6 @@
+<h1>RoutingKeys#new</h1>
+
+<%= form_with model: @routing_key, url: routing_keys_path, local: true do |form| %>
+<%= text_field_tag(:routing_key, @routing_key.routing_key, class: "form-control", required: "required") %>
+<%= submit_tag "Submit", class: "btn btn-primary" %>
+<% end %>
