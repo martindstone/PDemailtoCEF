@@ -10,6 +10,9 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container-fluid" id="application-content">
+        <%= flash_messages %>
+        <%= yield %>
+    </div>
   </body>
 </html>

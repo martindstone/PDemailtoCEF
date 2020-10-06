@@ -1,6 +1,27 @@
-<h1>RoutingKeys#new</h1>
-
+<h1>Register a routing key</h1>
+<p>&nbsp;</p>
+<% if @routing_key.errors.any? %>
+  <div class="alert alert-danger" id="error_explanation">
+    <b>
+      <%= pluralize(@routing_key.errors.count, "error") %> prevented this scheduled event from being saved:
+    </b>
+    <ul>
+      <% @routing_key.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
 <%= form_with model: @routing_key, url: routing_keys_path, local: true do |form| %>
-<%= text_field_tag(:routing_key, @routing_key.routing_key, class: "form-control", required: "required") %>
-<%= submit_tag "Submit", class: "btn btn-primary" %>
+  <div class="form-row">
+    <div class="form-group col-md-2" align="right">
+      <%= form.label(:routing_key, "Enter your routing key:")%>
+    </div>
+    <div class="form-group col-md-4">
+      <%= text_field_tag(:routing_key, @routing_key.routing_key, class: "form-control", required: "required") %>
+    </div>
+    <div class="form-group col-md-2">
+      <%= submit_tag "Go", class: "btn btn-primary" %>
+    </div>
+  </div>
 <% end %>

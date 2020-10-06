@@ -10,7 +10,10 @@ module PDemailtoCEF
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
-
+    config.autoload_paths << Rails.root.join("lib")
+    config.my_email_addr = ENV["CLOUDMAILIN_FORWARD_ADDRESS"] || ENV["EMAIL_ADDRESS"] || 'set_your_email_address@example.com'
+    config.my_email_name, config.my_email_domain = config.my_email_addr.split('@')
+    
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading

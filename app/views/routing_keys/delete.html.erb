@@ -1,0 +1,15 @@
+<h1>Unregister a routing key</h1>
+<p>&nbsp;</p>
+<%= form_with url: delete_routing_keys_path, method: :post, local: true do |form| %>
+  <div class="form-row">
+    <div class="form-group col-md-2" align="right">
+      <%= form.label(:routing_key, "Enter your routing key:")%>
+    </div>
+    <div class="form-group col-md-4">
+      <%= text_field_tag(:routing_key, nil, class: "form-control", required: "required") %>
+    </div>
+    <div class="form-group col-md-2">
+      <%= submit_tag "Go", class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>

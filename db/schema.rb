@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_05_192656) do
+ActiveRecord::Schema.define(version: 2020_10_06_133447) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 2020_10_05_192656) do
     t.boolean "verified"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "email"
+    t.index ["email"], name: "index_routing_keys_on_email", unique: true
     t.index ["routing_key"], name: "index_routing_keys_on_routing_key", unique: true
   end
 
