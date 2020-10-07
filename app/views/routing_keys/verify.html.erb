@@ -1,8 +1,15 @@
 <h1>Routing key verification</h1>
 <p>&nbsp;</p>
-<p>
-  OK great. Now when you send email to
-  <pre><%= @routing_key.email %></pre>
-  it will go to
-  <pre><%= @routing_key.routing_key %>
-</p>
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <p>
+      OK great. Now when you send email to
+      <p><code><%= @routing_key.email %></code></p>
+      it will go to
+      <p><code><%= @routing_key.routing_key %></code></p>
+      Keep this email address in a safe place - this is the only time it will be shown!
+    </p>
+  </div>
+  <div class="col-md-2"></div>
+</div>

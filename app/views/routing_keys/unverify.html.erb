@@ -1,8 +1,15 @@
 <h1>Routing key unverification</h1>
 <p>&nbsp;</p>
-<p>
-  OK great. We deleted your email
-  <pre><%= @routing_key.email %></pre>
-  and routing key
-  <pre><%= @routing_key.routing_key %>
-</p>
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <p>
+      OK great. We deleted your email 
+      <p><code><%= @routing_key.email %></code></p>
+      and unregistered your routing key
+      <p><code><%= @routing_key.routing_key %></code></p>
+      You can always come back later if you want to register your routing key again and get another email address.
+    </p>
+  </div>
+  <div class="col-md-2"></div>
+</div>

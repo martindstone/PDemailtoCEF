@@ -1,7 +1,16 @@
 <h1>Verify your routing key</h1>
 <p>&nbsp;</p>
-<p>
-  Cool. We sent an event to your routing key
-  <pre><%= @routing_key.routing_key %></pre>
-  with a verification link. Click on the link to get your new email address.
-</p>
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <p>
+      Cool. We sent an event to your routing key
+      <p>
+      <code><%= @routing_key.routing_key %></code>
+      </p>
+      with a verification link. Log in to PagerDuty, find the alert in <b>Incidents > Alerts</b>, and click on the link in the details to get your new email address.<br>
+      <i>You have ten minutes to verify this routing key, otherwise the token will expire and you'll have to register again.</i>
+    </p>
+  </div>
+  <div class="col-md-2"></div>
+</div>
